@@ -4,7 +4,7 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 const authMiddleware = require('./auth-middleware.js');
-const customRoutes = require('./custom-routes.js').default;
+const customRoutes = require('./custom-routes.js');
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);

@@ -1,6 +1,8 @@
 # Vue Online Store API
 API for the Vue online store app
 
+https://vue-online-store-api.herokuapp.com
+
 ## Authorization
 All `GET` endpoints require the `Authorization` header to be set with a token (obtained through the `login` endpoint).
 Example:
