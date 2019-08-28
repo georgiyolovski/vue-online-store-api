@@ -1,0 +1,24 @@
+{
+  "name": "vue-online-store-api",
+  "version": "1.0.0",
+  "description": "API for the Vue online store app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgiyolovski/vue-online-store-api.git"
+  },
+  "author": "Georgi Yolovski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georgiyolovski/vue-online-store-api/issues"
+  },
+  "homepage": "https://github.com/georgiyolovski/vue-online-store-api#readme",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "json-server": "^0.15.0",
+    "node-fetch": "^2.6.0"
+  }
+}
