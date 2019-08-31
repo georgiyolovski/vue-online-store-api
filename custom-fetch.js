@@ -11,13 +11,19 @@ module.exports = (req, res, next) => {
     res.status(200).json(found);
   } else if (subCategories) {
     const categoryId = subCategories[1];
-    const subs = data.categories.filter(c => c.id == categoryId)[0].subCategories;
-    const subIds = subs.map(s => s.id);
-    const subsWithData = data.categories.filter(c => c.id != categoryId && subIds.includes(c.id));
-    const subWithDataIds = subsWithData.map(s => s.id);
-    const all = subsWithData.concat(subs.filter(sub => !subWithDataIds.includes(sub.id)));
+    const primary = data.categories.filter(c => c.id == categoryId)[0]
 
-    res.status(200).json(all);
+    if (!primary) {
+      res.status(200).json([]);
+    } else {
+      const subs = primary.subCategories;
+      const subIds = subs.map(s => s.id);
+      const subsWithData = data.categories.filter(c => c.id != categoryId && subIds.includes(c.id));
+      const subWithDataIds = subsWithData.map(s => s.id);
+      const all = subsWithData.concat(subs.filter(sub => !subWithDataIds.includes(sub.id)));
+  
+      res.status(200).json(all);
+    }
   } else {
     next();
   }
