@@ -3,6 +3,7 @@ const data = require('./db.json')
 module.exports = (req, res, next) => {
   const productsByCategory = req.path.match(/\/api\/categories\/([a-zA-Z0-9]+)\/products/);
   const subCategories = req.path.match(/\/api\/categories\/([a-zA-Z0-9]+)\/sub/);
+  const reviews = req.path.match(/\/api\/products\/([a-zA-Z0-9]+)\/reviews/);
 
   if (productsByCategory) {
     const found = data.products.filter(p => 
@@ -24,7 +25,14 @@ module.exports = (req, res, next) => {
   
       res.status(200).json(all);
     }
-  } else {
+  } else if(reviews) {
+    const productId = parseInt(reviews[1]);
+    let userId = productId % 11;
+    userId = userId ? userId : 1;
+
+    const reviewData = data.reviews.filter(r => r.userId == userId);
+    res.status(200).json(reviewData);
+  }else {
     next();
   }
 };
