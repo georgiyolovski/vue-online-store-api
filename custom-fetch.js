@@ -5,6 +5,8 @@ module.exports = (req, res, next) => {
   const subCategories = req.path.match(/\/api\/categories\/([a-zA-Z0-9]+)\/sub/);
   const reviews = req.path.match(/\/api\/products\/([a-zA-Z0-9]+)\/reviews/);
   const alsoViewed = req.path.match(/\/api\/products\/([a-zA-Z0-9]+)\/also-viewed/);
+  const mostViewed = req.path.match(/\/api\/categories\/([a-zA-Z0-9]+)\/most-viewed/);
+  const dailyDeal = req.path.match(/\/api\/categories\/([a-zA-Z0-9]+)\/deal-of-the-day/);
 
   if (productsByCategory) {
     const found = data.products.filter(p => 
@@ -33,7 +35,7 @@ module.exports = (req, res, next) => {
 
     const reviewData = data.reviews.filter(r => r.userId == userId);
     res.status(200).json(reviewData);
-  } else if (alsoViewed) {
+  } else if (alsoViewed || mostViewed || dailyDeal) {
     const productCount = data.products.length;
     const randomProducts = [...Array(10).keys()]
       .map(i => {
