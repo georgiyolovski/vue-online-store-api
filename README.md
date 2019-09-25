@@ -16,11 +16,16 @@ Example:
 ## Endpoints
 * [Login](#login)
 * [Get Products](#get-products)
+* [Get Products by Category](#get-products-by-category)
 * [Get a Single Product](#get-a-single-product)
+* [Get Product Reviews](#get-product-reviews)
 * [Get Categories](#get-categories)
+* [Get Subcategories](#get-subcategories)
 * [Get a Single Category](#get-a-single-category)
 * [Get Most Viewed Products](#get-most-viewed-products)
+* [Get Most Viewed Products by Category](#get-most-viewed-products-by-category)
 * [Get Deals of the Day](#get-deals-of-the-day)
+* [Get Deals of the Day by Category](#get-deals-of-the-day-by-category)
 
 ### Login
 `POST /api/login`
@@ -105,6 +110,265 @@ Status `400 Bad Request`
 
 ### Get Products
 `GET /api/products`
+
+#### Sample Response
+Status `200 OK`
+
+```json
+[
+  {
+    "id": 1000006,
+    "score": null,
+    "productId": 2266824,
+    "name": "Spy Kids: All the Time in the World [Includes Digital Copy] [Blu-ray] [2011]",
+    "source": "bestbuy",
+    "type": "Movie",
+    "startDate": "2011-04-26",
+    "new": false,
+    "active": true,
+    "lowPriceGuarantee": true,
+    "activeUpdateDate": "2017-06-10T07:44:27",
+    "regularPrice": 12.99,
+    "salePrice": 12.99,
+    "clearance": false,
+    "onSale": false,
+    "planPrice": null,
+    "priceWithPlan": [],
+    "contracts": [],
+    "priceRestriction": null,
+    "priceUpdateDate": "2017-02-12T08:14:07",
+    "digital": false,
+    "preowned": false,
+    "carriers": [],
+    "planFeatures": [],
+    "devices": [],
+    "carrierPlans": [],
+    "technologyCode": null,
+    "carrierModelNumber": null,
+    "earlyTerminationFees": [],
+    "monthlyRecurringCharge": "",
+    "monthlyRecurringChargeGrandTotal": "",
+    "activationCharge": "",
+    "minutePrice": "",
+    "planCategory": null,
+    "planType": null,
+    "familyIndividualCode": null,
+    "validFrom": null,
+    "validUntil": null,
+    "carrierPlan": null,
+    "outletCenter": null,
+    "secondaryMarket": null,
+    "frequentlyPurchasedWith": [],
+    "accessories": [],
+    "relatedProducts": [],
+    "requiredParts": [],
+    "techSupportPlans": [],
+    "crossSell": [],
+    "salesRankShortTerm": null,
+    "salesRankMediumTerm": 29985,
+    "salesRankLongTerm": 45986,
+    "bestSellingRank": 42786,
+    "url": "https://api.bestbuy.com/click/-/1000006/pdp",
+    "spin360Url": null,
+    "mobileUrl": "https://api.bestbuy.com/click/-/1000006/pdp",
+    "affiliateUrl": null,
+    "addToCartUrl": "https://api.bestbuy.com/click/-/1000006/cart",
+    "affiliateAddToCartUrl": null,
+    "linkShareAffiliateUrl": "",
+    "linkShareAffiliateAddToCartUrl": "",
+    "upc": "013132620237",
+    "productTemplate": "Movies",
+    "categoryPath": [
+      {
+        "id": "cat00000",
+        "name": "Best Buy"
+      },
+      {
+        "id": "abcat0600000",
+        "name": "Movies & Music"
+      },
+      {
+        "id": "cat02015",
+        "name": "Movies & TV Shows"
+      }
+    ],
+    "alternateCategories": [],
+    "lists": [],
+    "customerReviewCount": 77,
+    "customerReviewAverage": 4.5,
+    "customerTopRated": true,
+    "format": "Blu-ray",
+    "freeShipping": false,
+    "freeShippingEligible": true,
+    "inStoreAvailability": false,
+    "inStoreAvailabilityText": "Store Pickup:",
+    "inStoreAvailabilityUpdateDate": "2017-08-25T12:34:36",
+    "itemUpdateDate": "2019-08-15T03:15:04",
+    "onlineAvailability": true,
+    "onlineAvailabilityText": "Backordered: Usually ships in 3-4 weeks",
+    "onlineAvailabilityUpdateDate": "2019-06-12T06:20:30",
+    "releaseDate": "2011-11-22",
+    "shippingCost": 3.99,
+    "shipping": [
+      {
+        "ground": 3.99,
+        "secondDay": 10.79,
+        "nextDay": 16.25,
+        "vendorDelivery": ""
+      }
+    ],
+    "shippingLevelsOfService": [
+      {
+        "serviceLevelId": 5,
+        "serviceLevelName": "One Day",
+        "unitShippingPrice": 16.25
+      },
+      {
+        "serviceLevelId": 3,
+        "serviceLevelName": "Two Day",
+        "unitShippingPrice": 10.79
+      },
+      {
+        "serviceLevelId": 15,
+        "serviceLevelName": "Standard",
+        "unitShippingPrice": 3.99
+      }
+    ],
+    "specialOrder": false,
+    "shortDescription": null,
+    "class": "BLU RAY MOVIES",
+    "classId": 76,
+    "subclass": "CHILDRENS",
+    "subclassId": 1006,
+    "department": "VIDEO/COMPACT DISC",
+    "departmentId": 8,
+    "protectionPlanTerm": "BD-",
+    "protectionPlanType": null,
+    "protectionPlanLowPrice": "",
+    "protectionPlanHighPrice": "",
+    "buybackPlans": [],
+    "protectionPlans": [],
+    "protectionPlanDetails": [],
+    "productFamilies": [],
+    "productVariations": [],
+    "aspectRatio": null,
+    "screenFormat": null,
+    "lengthInMinutes": 89,
+    "mpaaRating": "PG",
+    "plot": "A retired spy-turned-full-time homemaker attempts to stop a power-mad supervillain from taking over the planet, and gets some unexpected help from her disagreeable twin step-children in this fourth entry of writer/director Robert Rodriguez's family-friendly adventure series. It's been a long time since former OSS agent Marissa Cortez Wilson (Jessica Alba) went chasing bad guys. These days it's hard enough just to get her precocious stepkids, Rebecca (Rowan Blanchard) and Cecil (Mason Cook), to clean their rooms, and make sure her baby daughter has a full sippy cup. And despite the fact that Marissa's husband, Wilbur (Joel McHale), earns his income chasing spies on TV, he hasn't a clue that his mild-mannered wife was once a cloak-and-dagger woman. Now the nefarious Timekeeper (Jeremy Piven) has hatched a plot for world domination, prompting the OSS to summon Marissa back to active duty. When Rebecca and Cecil discover their stepmother's tightly guarded secret, they realize they might be the only hope for getting her out of a tight jam and foiling the Timekeeper's evil plan. Fortunately Carmen (Alexa Vega) and Juni Cortez (Daryl Sabara) are more than willing to teach Rebecca and Cecil the tricks of the trade, and in no time the two bickering ten-year-olds are wielding hi-tech gadgets and heading out on their first assignment.~Jason Buchanan",
+    "studio": "Lionsgate",
+    "theatricalReleaseDate": "2011",
+    "description": null,
+    "manufacturer": null,
+    "modelNumber": "26091006",
+    "images": [
+      {
+        "rel": "Front_Original",
+        "unitOfMeasure": "pixels",
+        "width": "778",
+        "height": "1000",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_so.jpg"
+      },
+      {
+        "rel": "Front_Thumbnail",
+        "unitOfMeasure": "pixels",
+        "width": "54",
+        "height": "69",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_s.gif"
+      },
+      {
+        "rel": "Front_Detail",
+        "unitOfMeasure": "pixels",
+        "width": "105",
+        "height": "135",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sc.jpg"
+      },
+      {
+        "rel": "Front_Standard",
+        "unitOfMeasure": "pixels",
+        "width": "389",
+        "height": "500",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sa.jpg"
+      },
+      {
+        "rel": "Front_Large",
+        "unitOfMeasure": "pixels",
+        "width": "124",
+        "height": "160",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sb.jpg"
+      },
+      {
+        "rel": "Front_Medium",
+        "unitOfMeasure": "pixels",
+        "width": "70",
+        "height": "90",
+        "href": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006fp.gif"
+      }
+    ],
+    "image": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sa.jpg",
+    "largeFrontImage": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sb.jpg",
+    "mediumImage": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006fp.gif",
+    "thumbnailImage": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_s.gif",
+    "largeImage": "https://img.bbystatic.com/BestBuy_US/images/products/1000/1000006_sb.jpg",
+    "alternateViewsImage": null,
+    "angleImage": null,
+    "backViewImage": null,
+    "energyGuideImage": null,
+    "leftViewImage": null,
+    "accessoriesImage": null,
+    "remoteControlImage": null,
+    "rightViewImage": null,
+    "topViewImage": null,
+    "albumTitle": "Spy Kids: All the Time in the World [Includes Digital Copy] [Blu-ray]",
+    "artistName": null,
+    "artistId": null,
+    "originalReleaseDate": null,
+    "parentalAdvisory": null,
+    "mediaCount": null,
+    "monoStereo": null,
+    "studioLive": null,
+    "condition": "New",
+    "inStorePickup": false,
+    "friendsAndFamilyPickup": true,
+    "homeDelivery": false,
+    "quantityLimit": 3,
+    "fulfilledBy": "BestBuy.com",
+    "members": [],
+    "bundledIn": [],
+    "albumLabel": null,
+    "genre": "Action and Adventure",
+    "color": null,
+    "depth": null,
+    "dollarSavings": 0,
+    "percentSavings": "0.0",
+    "tradeInValue": "",
+    "height": null,
+    "orderable": "Available",
+    "weight": null,
+    "shippingWeight": 0.25,
+    "width": null,
+    "warrantyLabor": null,
+    "warrantyParts": null,
+    "softwareAge": null,
+    "softwareGrade": null,
+    "platform": null,
+    "numberOfPlayers": null,
+    "softwareNumberOfPlayers": null,
+    "esrbRating": null,
+    "longDescription": null,
+    "includedItemList": [],
+    "marketplace": false,
+    "listingId": null,
+    "sellerId": null,
+    "shippingRestrictions": null,
+    "proposition65WarningMessage": null,
+    "proposition65WarningType": "05"
+  }
+]
+```
+
+### Get Products by Category
+`GET /api/categories/:id/products`
 
 #### Sample Response
 Status `200 OK`
@@ -619,6 +883,31 @@ Status `200 OK`
   }
 ```
 
+### Get Product Reviews
+`GET /api/products/:id/reviews`
+
+#### Sample Response
+Status `200 OK`
+
+```json
+[
+  {
+    "userId": 7,
+    "id": 61,
+    "title": "voluptatem doloribus consectetur est ut ducimus",
+    "body": "ab nemo optio odio\ndelectus tenetur corporis similique nobis repellendus rerum omnis facilis\nvero blanditiis debitis in nesciunt doloribus dicta dolores\nmagnam minus velit",
+    "rating": 2
+  },
+  {
+    "userId": 7,
+    "id": 62,
+    "title": "beatae enim quia vel",
+    "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio",
+    "rating": 1
+  }
+]
+```
+
 ### Get Categories
 `GET /api/categories`
 
@@ -860,8 +1149,69 @@ Status `200 OK`
 ]
 ```
 
+### Get Most Viewed Products by Category
+`GET /api/categories/:id/most-viewed`
+
+#### Sample Response
+Status `200 OK`
+
+```json
+[
+  {
+    "id": 1006587,
+    "score": null,
+    "productId": 2119491,
+    "name": "The Losers [DVD] [2010]",
+    "source": "bestbuy",
+    "type": "Movie",
+    "startDate": "2009-12-22",
+    ...
+  }
+]
+```
+
+### Get Subcategories
+`GET /api/categories/:id/sub`
+
+#### Sample Response
+Status `200 OK`
+
+```json
+[
+  {
+    "id": "pcmcat1496256957402",
+    "name": "Top Tech Gifts"
+  },
+  {
+    "id": "pcmcat748301108075",
+    "name": "Stocking Stuffers"
+  }
+]
+```
+
 ### Get Deals of the Day
 `GET /api/products/deal-of-the-day`
+
+#### Sample Response
+Status `200 OK`
+
+```json
+[
+  {
+    "id": 1006587,
+    "score": null,
+    "productId": 2119491,
+    "name": "The Losers [DVD] [2010]",
+    "source": "bestbuy",
+    "type": "Movie",
+    "startDate": "2009-12-22",
+    ...
+  }
+]
+```
+
+### Get Deals of the Day by Category
+`GET /api/categories/:id/deal-of-the-day`
 
 #### Sample Response
 Status `200 OK`
