@@ -19,6 +19,6 @@
   "dependencies": {
     "btoa": "^1.2.1",
     "json-server": "^0.15.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
